@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Vue  -->
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css' integrity='sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw==' crossorigin='anonymous'/>
+    <!-- Vue -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.js' integrity='sha512-2zwx0mkoR2cxZY0humPK79YhJYgoX5lT+WNqkgTcV7qhVm3+msjlmOgoXnN1cW2r9qqbZez3XhnLZsyW3k8Wtg==' crossorigin='anonymous'></script>
-    <!-- Css  -->
+    <!-- Css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Slider</title>
 </head>
@@ -16,8 +22,44 @@
 <body>
     
     <div id="app">
+
+        <h1>{{title}}</h1>
+    
+        <div class="wrapper">
+
+            <div class="container">
         
+                <div class="slider">
+                    <!-- aggiunti eventListener al click delle arrow
+                    con valore booleano -->
+                    <div @click="arrow(false)" class="arrow left" id="prev">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div @click="arrow(true)" class="arrow right" id="next">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <!-- aggiunta delle immagini dinamicamente con il *bind* -->
+                    <div class="pics-wrapper">
+                        <img :src="pictures[counter]">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container-thumb">
+                <!-- 
+                utilizzo del *v-for* per ciclare le thumb delle immagini
+                +
+                Bonus 1: al click di una thumb si apre l'immagine "grande" corrispettiva
+                -->
+                <img @click="counter = picture" v-for="(i, picture) in pictures" :src="i">
+            </div>
+
+        </div>
+
     </div>
+    
 
     <script src="assets/js/script.js"></script>
 </body>
