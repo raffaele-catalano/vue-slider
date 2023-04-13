@@ -84,7 +84,7 @@ h1 {
 
 .container-thumb {
     display: flex;
-    width: 200px;
+    width: 150px;
     height: 600px;
     flex-direction: column;
     box-shadow: 1px 1px 12px rgba(255, 255, 255, .3);
@@ -96,6 +96,7 @@ h1 {
     height: calc(100% / 5);
     cursor: pointer;
     opacity: .3;
+    object-fit: cover;
 }
 
 .thumb-pic:hover {
