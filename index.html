@@ -54,7 +54,7 @@
                 +
                 Bonus 1: al click di una thumb si apre l'immagine "grande" corrispettiva
                 -->
-                <img @click="counter = picture" v-for="(i, picture) in pictures" :src="i">
+                <img v-for="(picture, i) in pictures" :src="picture" class="thumb-pic" :class="i === counter ? removeOpacity : keepOpacity" @click="counter = i">
             </div>
 
         </div>
