@@ -100,8 +100,10 @@ h1 {
 
 .thumb-pic:hover {
     opacity: 1;
+    border: 1px solid white
 }
 
 .spotlight {
     opacity: 1;
+    border: 1px solid white
 }
