@@ -42,6 +42,13 @@ createApp({
         // log() {
         //     console.log('siamo uguali')
         // }
+        mouseOver () {
+            clearInterval(this.play)
+        },
+
+        mouseOut () {
+            this.autoPlay()
+        }
     },
 
     mounted() {
