@@ -30,6 +30,8 @@ createApp({
             if (this.counter < 0) this.counter = this.pictures.length -1;
         },
 
+        // questa funzione fa in modo che, all'aumentare del contatore cambi anche 
+        // l'immagine visualizzata con un intervallo di 3 secondi
         autoPlay () {
             this.play = setInterval(() => {
                 this.counter++
@@ -38,14 +40,14 @@ createApp({
                 }
             }, 3000);
         },
-        // come si fanno i console.log in vue (richiamando la funzione in html)
-        // log() {
-        //     console.log('siamo uguali')
-        // }
+
+        // con questa funzione, che parte nel momento in cui si va col mouse sopra, viene 
+        // clearato il setInterval
         mouseOver () {
             clearInterval(this.play)
         },
-
+        // con questa funzione, che parte nel momento in cui si va VIA col mouse sopra, 
+        // si fa ripartire il setInterval
         mouseOut () {
             this.autoPlay()
         }
