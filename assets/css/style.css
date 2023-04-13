@@ -6,6 +6,8 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
     font-family: 'Kaushan Script', cursive;
     background-color: #141D2B;
     background-position: center;
@@ -23,6 +25,7 @@ h1 {
 /*MAIN CONTENT*/
 
 .wrapper {
+    width: 950px;
     display: flex;
     justify-content: center;
     align-items: center;
