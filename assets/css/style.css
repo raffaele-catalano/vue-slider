@@ -33,6 +33,7 @@ h1 {
     height: 600px;
     box-shadow: 1px 1px 12px rgba(255, 255, 255, .3);
     border: 1px solid rgba(255, 255, 255, 0.700);
+    cursor: pointer;
 }
 
 .slider {
@@ -88,6 +89,7 @@ h1 {
     flex-direction: column;
     box-shadow: 1px 1px 12px rgba(255, 255, 255, .3);
     border: 1px solid rgba(255, 255, 255, 0.700);
+    cursor: pointer;
 }
 
 .thumb-pic {
